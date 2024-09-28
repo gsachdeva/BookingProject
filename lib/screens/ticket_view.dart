@@ -206,12 +206,12 @@ class TicketView extends StatelessWidget {
                        crossAxisAlignment: CrossAxisAlignment.end,
                        children: [
                          Text(
-                           "23",
+                           ticket['number'].toString(),
                            style: Styles.headingStyle3.copyWith(color:Colors.white),
                          ),
                          const Gap(5),
                          Text(
-                           ticket['number'].toString(),
+                           "Number",
                            style: Styles.headingStyle4.copyWith(color:Colors.white),
                          ),
                        ],
