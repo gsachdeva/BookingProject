@@ -6,6 +6,7 @@ import 'package:ticket_project/screens/ticket_view.dart';
 import 'package:ticket_project/utils/app_styles.dart';
 
 import '../utils/app_info_list.dart';
+import '../utils/app_layout.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -39,8 +40,8 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                     Container(
-                      height: 50,
-                      width: 50,
+                      height: AppLayout.getHeight(50),
+                      width: AppLayout.getWidth(50),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: const DecorationImage(
@@ -108,7 +109,7 @@ class HomeScreen extends StatelessWidget {
           Gap(15),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.only(left: 20),
+            padding:  EdgeInsets.only(left: AppLayout.getWidth(16)),
             child:Row(
               children: hotelList.map((singleHotel) => HotelScreen(hotel: singleHotel)).toList(),
             ),

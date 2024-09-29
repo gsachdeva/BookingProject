@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ticket_project/utils/app_layout.dart';
@@ -16,7 +15,7 @@ class TicketView extends StatelessWidget {
     return SizedBox(
 
       width: size.width*0.85,
-      height: 200,
+      height: AppLayout.getHeight(200),
       child: Container(
         margin: const EdgeInsets.only(left: 16),
         child: Column(
@@ -81,7 +80,7 @@ class TicketView extends StatelessWidget {
                   Row(
                     children: [
                       SizedBox(
-                        width: 100,
+                        width: AppLayout.getWidth(100),
                         child: Text(
                           ticket['from']['name'],
                           textAlign: TextAlign.start,
@@ -97,7 +96,7 @@ class TicketView extends StatelessWidget {
                       ),
                       Spacer(),
                       SizedBox(
-                        width: 100,
+                        width: AppLayout.getWidth(100),
                         child: Text(
                           ticket['to']['name'],
                           textAlign: TextAlign.end,
