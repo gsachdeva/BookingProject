@@ -4,6 +4,7 @@ import 'package:get/get_common/get_reset.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:ticket_project/utils/app_layout.dart';
 import 'package:ticket_project/utils/app_styles.dart';
+import 'package:ticket_project/widgets/AppIconText.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -46,6 +47,26 @@ class SearchScreen extends StatelessWidget {
                 ],
               ),
             ),
+          ),
+          Gap(AppLayout.getHeight(25)),
+          const AppIconText(icon: Icons.flight_takeoff_rounded, text: "Departure"),
+          Gap(AppLayout.getHeight(20)),
+          const AppIconText(icon: Icons.flight_land_rounded, text: "Arrival"),
+          Gap(AppLayout.getHeight(25)),
+          Container(
+            padding: EdgeInsets.symmetric(
+                vertical: AppLayout.getHeight(18),
+                horizontal: AppLayout.getWidth(12)),
+            decoration: BoxDecoration(
+              color: Color(0xD91130CE),
+              borderRadius: BorderRadius.circular(AppLayout.getWidth(10)),
+            ),
+            child:  Center(
+              child: Text(
+                "Find tickets",
+                style: Styles.textStyle.copyWith(color: Colors.white),
+              ),
+            )
           )
         ],
       ),
