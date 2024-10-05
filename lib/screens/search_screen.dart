@@ -4,6 +4,7 @@ import 'package:get/get_common/get_reset.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:ticket_project/utils/app_layout.dart';
 import 'package:ticket_project/utils/app_styles.dart';
+import 'package:ticket_project/utils/tickets_tabs.dart';
 import 'package:ticket_project/widgets/AppIconText.dart';
 import 'package:ticket_project/widgets/double_text_widget.dart';
 
@@ -21,34 +22,7 @@ class SearchScreen extends StatelessWidget {
           Gap(AppLayout.getHeight(40)),
           Text("What are\nyou looking for?",style: Styles.headingStyle.copyWith(fontSize: AppLayout.getWidth(35)),),
           Gap(AppLayout.getHeight(20)),
-          FittedBox(
-            child:
-            Container(
-              padding: EdgeInsets.all(3.5),
-              child: Row(
-                children: [
-                  Container(
-                    width: size.width*.44,
-                    padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.horizontal(left: Radius.circular(AppLayout.getHeight(50)),),
-                      color:  Colors.white,
-                    ),
-                    child:const Center(child:Text("Airline Tickets")),
-                  ),
-                  Container(
-                    width: size.width*.44,
-                    padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.horizontal(right: Radius.circular(AppLayout.getHeight(50)),),
-                      color:  Colors.transparent,
-                    ),
-                    child:const Center(child:Text("Hotels")),
-                  )
-                ],
-              ),
-            ),
-          ),
+          const AppTicketTabs(firstTabs: "Airline Tickets", secondTabs: "Hotels"),
           Gap(AppLayout.getHeight(25)),
           const AppIconText(icon: Icons.flight_takeoff_rounded, text: "Departure"),
           Gap(AppLayout.getHeight(20)),
